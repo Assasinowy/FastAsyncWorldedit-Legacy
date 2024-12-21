@@ -6,7 +6,7 @@
 
 # This is the legacy version of FAWE (1.8 - 1.12 and other platforms). It is no longer maintained. The focus lays on the newer versions of minecraft. You can find the new version of FAWE [here](https://github.com/IntellectualSites/FastAsyncWorldEdit).
 
-FAWE is a fork of WorldEdit that has huge speed and memory improvements and considerably more features
+FAWE is a fork of WorldEdit that has huge speed and memory improvements and considerably more feature
 
 It is available for Bukkit, Forge, Sponge and Nukkit.
 
