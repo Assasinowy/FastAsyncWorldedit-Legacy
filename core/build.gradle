@@ -1,12 +1,12 @@
 repositories {
-    flatDir {dirs 'lib'}
+    flatDir {dirs '../lib'}
 }
 dependencies {
-    testCompile 'junit:junit:4.12'
+    testCompile 'junit:junit:4.13.1'
     compile 'org.yaml:snakeyaml:1.16'
     compile 'com.google.code.gson:gson:2.2.4'
     compile 'net.fabiozumbi12:redprotect:1.9.6'
-    compile 'com.plotsquared:plotsquared-api:3.1'
+    compile 'com.plotsquared:PlotSquared-Bukkit:3.823'
     compile 'org.primesoft:BlocksHub:2.0'
     compile 'com.github.luben:zstd-jni:1.1.1'
 //    compile 'org.javassist:javassist:3.22.0-CR1'
@@ -28,7 +28,7 @@ processResources {
 
 jar.archiveName="fawe-api-${project.parent.version}.jar"
 jar.destinationDir = file '../mvn/com/boydti/fawe-api/' + project.parent.version
-task createPom << {
+task createPom doLast {
     pom {
         project {
             groupId 'com.boydti'

@@ -1,11 +1,15 @@
+repositories {
+    flatDir {dirs '../lib'}
+}
 dependencies {
-    compile project(':bukkit')
+    compileOnly project(':bukkit')
 }
 
 clean { delete "../target" }
 
 processResources {
     from('src/main/resources') {
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
         include 'plugin.yml'
         expand(
                 name: project.parent.name,
