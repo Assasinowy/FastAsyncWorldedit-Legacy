@@ -28,7 +28,7 @@ public class ExtentTraverser<T extends Extent> {
     public boolean setNext(T next) {
         try {
             Field field = AbstractDelegateExtent.class.getDeclaredField("extent");
-            ReflectionUtils.setFailsafeFieldValue(field, root, next);
+            ReflectionUtils.setGracefullyNonFinalFieldValue(field, root, next);
             return true;
         } catch (Throwable e) {
             e.printStackTrace();

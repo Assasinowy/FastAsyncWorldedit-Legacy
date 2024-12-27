@@ -142,6 +142,16 @@ public class ReflectionUtils {
         }
     }
 
+    public static void setGracefullyNonFinalFieldValue(Field field, Object target, Object value)
+            throws IllegalAccessException {
+        try {
+            field.setAccessible(true);
+            field.set(target, value);
+        } catch (NoSuchMethodError error) {
+            field.set(target, value);
+        }
+    }
+
     private static void blankField(Class<?> enumClass, String fieldName)
             throws NoSuchFieldException, IllegalAccessException {
         for (Field field : Class.class.getDeclaredFields()) {
